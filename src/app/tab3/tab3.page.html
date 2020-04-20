@@ -1,0 +1,121 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Buscar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)"></ion-searchbar>
+
+  <ion-item>
+    <ion-label>Filtros</ion-label>
+    <ion-select [(ngModel)]="type" (ionChange)="searchChanged($event)">
+      <ion-select-option value="">Todo</ion-select-option>
+      <ion-select-option value="movie">Pelicula</ion-select-option>
+      <ion-select-option value="series">Serie</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-list>
+
+    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'pelis', item.imdbID]">
+      <ion-avatar slot="start">
+        <img [src]="item.Poster" *ngIf="item.Poster != 'N/A'">
+      </ion-avatar>
+
+      <ion-label text-wrap>
+        <h3>{{ item.Title }}</h3>
+        {{ item.Year }}
+      </ion-label>
+
+      <ion-icon slot="end" *ngIf="item.Type == 'movie'" name="videocam"></ion-icon>
+      <ion-icon slot="end" *ngIf="item.Type == 'series'" name="tv"></ion-icon>
+
+    </ion-item>
+
+  </ion-list>
+
+
+  <ion-item>
+
+    <ion-label text-wrap>
+      <h2>"Suegrencia"</h2>
+      <h2>Te recomendamos estas Películas</h2>
+
+    </ion-label>
+
+  </ion-item>
+
+  <ion-item href="https://play.google.com/store/movies/details/Blade_Runner?id=86B946BCEA9BC57DMV">
+    <ion-avatar slot="start">
+      <img src="https://pics.filmaffinity.com/Blade_Runner-351607743-large.jpg">
+    </ion-avatar>
+    <ion-label text-wrap>
+      <h3>Blade Runner</h3>
+      1982
+    </ion-label>
+    <ion-icon slot="end" name="videocam"></ion-icon>
+  </ion-item>
+
+  <ion-item href="https://play.google.com/store/movies/details/Blade_Runner_2049_Subtitulada?id=NL9_bfrUJQk">
+    <ion-avatar slot="start">
+      <img src="https://pics.filmaffinity.com/Blade_Runner_2049-681477614-large.jpg">
+    </ion-avatar>
+    <ion-label text-wrap>
+      <h3>Blade Runner 2049</h3>
+      2017
+    </ion-label>
+    <ion-icon slot="end" name="videocam"></ion-icon>
+  </ion-item>
+
+
+  <ion-item href="https://play.google.com/store/movies/details/Alien_el_octavo_pasajero_Doblada?id=AeBU7kfu6sc">
+    <ion-avatar slot="start">
+      <img
+        src="https://m.media-amazon.com/images/M/MV5BMmQ2MmU3NzktZjAxOC00ZDZhLTk4YzEtMDMyMzcxY2IwMDAyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg">
+    </ion-avatar>
+    <ion-label text-wrap>
+      <h3>Alien</h3>
+      1979
+    </ion-label>
+    <ion-icon slot="end" name="videocam"></ion-icon>
+  </ion-item>
+
+  <ion-item href="https://play.google.com/store/movies/details/Titanes_Del_Pac%C3%AD_fico_Doblada?id=gksMarZAkxM">
+    <ion-avatar slot="start">
+      <img src="https://pics.filmaffinity.com/Pacific_Rim-635800660-large.jpg">
+    </ion-avatar>
+    <ion-label text-wrap>
+      <h3>Pacific Rim</h3>
+      2013
+    </ion-label>
+    <ion-icon slot="end" name="videocam"></ion-icon>
+  </ion-item>
+
+  <ion-item
+    href="https://play.google.com/store/movies/details/Midsommar_El_terror_no_espera_la_noche_Subtitulada?id=N-n8BmuNSHU">
+    <ion-avatar slot="start">
+      <img src="https://pics.filmaffinity.com/Midsommar-578791309-large.jpg">
+    </ion-avatar>
+    <ion-label text-wrap>
+
+      <h3>Midsommar</h3>
+
+    </ion-label>
+    <ion-icon slot="end" name="videocam"></ion-icon>
+  </ion-item>
+
+  <ion-item href="https://play.google.com/store/movies/details/Suspiria?id=7E9BBF33CE25B15FMV">
+    <ion-avatar slot="start">
+      <img src="https://pics.filmaffinity.com/Suspiria-121071573-large.jpg">
+    </ion-avatar>
+    <ion-label text-wrap>
+      <h3>Suspiria</h3>
+      1977
+    </ion-label>
+    <ion-icon slot="end" name="videocam"></ion-icon>
+  </ion-item>
+</ion-content>
