@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'pelis/:id',
     loadChildren: () => import('./pelis/pelis.module').then(m => m.PelisPageModule)
+  },  {
+    path: 'tab4',
+    loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
   }
+
 ];
 @NgModule({
   imports: [
