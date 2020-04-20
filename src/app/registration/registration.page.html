@@ -1,39 +1,22 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Registro</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="container">
+  <div class="login">
+    <div class="login-triangle"></div>
 
-<ion-content>
-  <form>
-    <ion-item lines="full">
-      <ion-label position="floating">Nombre</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
+    <h2 class="login-header">Create an account</h2>
 
-    <ion-item lines="full">
-      <ion-label position="floating">Apelldo</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
-
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
-
-    <ion-item lines="full">
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" required></ion-input>
-    </ion-item>
-
-    <ion-row>
-      <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Registrar</ion-button>
-      </ion-col>
-    </ion-row>
-  </form>
-</ion-content>
-
+    <form #frmRegister="ngForm" class="login-container" (ngSubmit)="onRegister(frmRegister)">
+      <p>
+        <input type="text" name="name" placeholder="name" ngModel required>
+      </p>
+      <p>
+        <input type="email" name="email" placeholder="Email" ngModel required>
+      </p>
+      <p>
+        <input type="password" name="password" placeholder="Password" ngModel required>
+      </p>
+      <p>
+        <input type="submit" value="Register">
+      </p>
+    </form>
+  </div>
+</div>

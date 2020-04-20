@@ -1,35 +1,24 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
-  <ion-grid>
-    <ion-row justify-content-center>
-      <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-        <div text-center>
-          <h4>Login Form</h4>
-        </div>
-        <div padding>
-          <ion-item lines="full">
-            <ion-label position="floating">Email</ion-label>
-            <ion-input type="text" required></ion-input>
-          </ion-item>
 
-          <ion-item lines="full">
-            <ion-label position="floating">Contraseña</ion-label>
-            <ion-input type="password" required></ion-input>
-          </ion-item>
-        </div>
 
-        <div padding>
-          <ion-button type="submit" color="danger" href="/tabs" expand="block">Inicia</ion-button>
-          <a [routerLink]="['/forgot-password']" class="small-text">¿Olvidaste tu contraseña?</a>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-content>
+<div class="container">
+  <div class="login">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Log in</h2>
+
+    <form #frmLogin="ngForm" class="login-container" (ngSubmit)="onLogin(frmLogin)">
+      <p>
+        <input type="email" name="email" placeholder="Email" ngModel required>
+      </p>
+      <p>
+        <input type="password" name="password" placeholder="Password" ngModel required>
+      </p>
+      <p>
+        <input type="submit" value="Send">
+      </p>
+    </form>
+    
+    <a [routerLink]="['/registration']" class="small-text">¿No tienes cuenta? , ¡unete!</a>
+  </div>
+</div>
