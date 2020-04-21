@@ -10,6 +10,7 @@ import { MovieService } from '../services/movie.service';
 export class PelisPage implements OnInit {
 
   information = null;
+  showNotas: boolean;
 
   constructor(private activatedRoute: ActivatedRoute, private movieService: MovieService) { }
 
@@ -23,4 +24,10 @@ export class PelisPage implements OnInit {
   openWebsite() {
     window.open(this.information.Website, '_blank');
   }
+
+
+  showNote() {
+    this.showNotas = !this.showNotas;
+  }
+
 }
