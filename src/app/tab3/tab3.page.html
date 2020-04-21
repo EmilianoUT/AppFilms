@@ -21,7 +21,7 @@
 
   <ion-list color="blu">
 
-    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'pelis', item.imdbID]">
+    <ion-item color="blu" button *ngFor="let item of (results | async)" [routerLink]="['/', 'pelis', item.imdbID]">
       <ion-avatar slot="start">
         <img [src]="item.Poster" *ngIf="item.Poster != 'N/A'">
       </ion-avatar>
