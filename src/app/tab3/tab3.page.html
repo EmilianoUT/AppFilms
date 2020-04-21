@@ -1,25 +1,25 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="red">
     <ion-title>
       Buscar
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="blu">
 
-  <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)"></ion-searchbar>
+  <ion-searchbar class="dorado" [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)"></ion-searchbar>
 
-  <ion-item>
+  <ion-item color="blu" class="dorado">
     <ion-label>Filtros</ion-label>
-    <ion-select [(ngModel)]="type" (ionChange)="searchChanged($event)">
+    <ion-select color="blu" class="dorado" [(ngModel)]="type" (ionChange)="searchChanged($event)">
       <ion-select-option value="">Todo</ion-select-option>
       <ion-select-option value="movie">Pelicula</ion-select-option>
       <ion-select-option value="series">Serie</ion-select-option>
     </ion-select>
   </ion-item>
 
-  <ion-list>
+  <ion-list color="blu">
 
     <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'pelis', item.imdbID]">
       <ion-avatar slot="start">
@@ -31,15 +31,15 @@
         {{ item.Year }}
       </ion-label>
 
-      <ion-icon slot="end" *ngIf="item.Type == 'movie'" name="videocam"></ion-icon>
-      <ion-icon slot="end" *ngIf="item.Type == 'series'" name="tv"></ion-icon>
+      <ion-icon class="dorado" slot="end" *ngIf="item.Type == 'movie'" name="videocam"></ion-icon>
+      <ion-icon class="dorado" slot="end" *ngIf="item.Type == 'series'" name="tv"></ion-icon>
 
     </ion-item>
 
   </ion-list>
 
 
-  <ion-item>
+  <ion-item color="blu">
 
     <ion-label text-wrap>
       <h2>"Suegrencia"</h2>
@@ -49,7 +49,7 @@
 
   </ion-item>
 
-  <ion-item href="https://play.google.com/store/movies/details/Blade_Runner?id=86B946BCEA9BC57DMV">
+  <ion-item color="blu" href="https://play.google.com/store/movies/details/Blade_Runner?id=86B946BCEA9BC57DMV">
     <ion-avatar slot="start">
       <img src="https://images-na.ssl-images-amazon.com/images/I/51ZmDpb2QfL._AC_.jpg">
     </ion-avatar>
@@ -57,10 +57,11 @@
       <h3>Blade Runner</h3>
       1982
     </ion-label>
-    <ion-icon slot="end" name="videocam"></ion-icon>
+    <ion-icon class="dorado" slot="end" name="videocam"></ion-icon>
   </ion-item>
 
-  <ion-item href="https://play.google.com/store/movies/details/Blade_Runner_2049_Subtitulada?id=NL9_bfrUJQk">
+  <ion-item color="blu"
+    href="https://play.google.com/store/movies/details/Blade_Runner_2049_Subtitulada?id=NL9_bfrUJQk">
     <ion-avatar slot="start">
       <img src="https://images-na.ssl-images-amazon.com/images/I/71PhjEaTZ6L._AC_SL1111_.jpg">
     </ion-avatar>
@@ -68,11 +69,12 @@
       <h3>Blade Runner 2049</h3>
       2017
     </ion-label>
-    <ion-icon slot="end" name="videocam"></ion-icon>
+    <ion-icon class="dorado" slot="end" name="videocam"></ion-icon>
   </ion-item>
 
 
-  <ion-item href="https://play.google.com/store/movies/details/Alien_el_octavo_pasajero_Doblada?id=AeBU7kfu6sc">
+  <ion-item color="blu"
+    href="https://play.google.com/store/movies/details/Alien_el_octavo_pasajero_Doblada?id=AeBU7kfu6sc">
     <ion-avatar slot="start">
       <img
         src="https://m.media-amazon.com/images/M/MV5BMmQ2MmU3NzktZjAxOC00ZDZhLTk4YzEtMDMyMzcxY2IwMDAyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg">
@@ -81,10 +83,11 @@
       <h3>Alien</h3>
       1979
     </ion-label>
-    <ion-icon slot="end" name="videocam"></ion-icon>
+    <ion-icon class="dorado" slot="end" name="videocam"></ion-icon>
   </ion-item>
 
-  <ion-item href="https://play.google.com/store/movies/details/Titanes_Del_Pac%C3%AD_fico_Doblada?id=gksMarZAkxM">
+  <ion-item color="blu"
+    href="https://play.google.com/store/movies/details/Titanes_Del_Pac%C3%AD_fico_Doblada?id=gksMarZAkxM">
     <ion-avatar slot="start">
       <img src="https://images-na.ssl-images-amazon.com/images/I/91UXzpHr47L.jpg">
     </ion-avatar>
@@ -92,10 +95,10 @@
       <h3>Pacific Rim</h3>
       2013
     </ion-label>
-    <ion-icon slot="end" name="videocam"></ion-icon>
+    <ion-icon class="dorado" slot="end" name="videocam"></ion-icon>
   </ion-item>
 
-  <ion-item
+  <ion-item color="blu"
     href="https://play.google.com/store/movies/details/Midsommar_El_terror_no_espera_la_noche_Subtitulada?id=N-n8BmuNSHU">
     <ion-avatar slot="start">
       <img src="https://es.web.img3.acsta.net/pictures/19/06/21/14/22/1409242.jpg">
@@ -105,10 +108,10 @@
       <h3>Midsommar</h3>
 
     </ion-label>
-    <ion-icon slot="end" name="videocam"></ion-icon>
+    <ion-icon class="dorado" slot="end" name="videocam"></ion-icon>
   </ion-item>
 
-  <ion-item href="https://play.google.com/store/movies/details/Suspiria?id=7E9BBF33CE25B15FMV">
+  <ion-item color="blu" href="https://play.google.com/store/movies/details/Suspiria?id=7E9BBF33CE25B15FMV">
     <ion-avatar slot="start">
       <img src="https://cinelipsis.files.wordpress.com/2018/09/51sudso-zl-_sl1003_.jpg?w=460&h=795">
     </ion-avatar>
@@ -116,6 +119,6 @@
       <h3>Suspiria</h3>
       1977
     </ion-label>
-    <ion-icon slot="end" name="videocam"></ion-icon>
+    <ion-icon class="dorado" slot="end" name="videocam"></ion-icon>
   </ion-item>
 </ion-content>

@@ -74,7 +74,35 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+/** red **/
+
+  --ion-color-red: #D50000;
+  --ion-color-red-rgb: 213,0,0;
+  --ion-color-red-contrast: #ffffff;
+  --ion-color-red-contrast-rgb: 255,255,255;
+  --ion-color-red-shade: #bb0000;
+  --ion-color-red-tint: #d91a1a;
+
+/** blu **/
+ --ion-color-blu: #010522;
+  --ion-color-blu-rgb: 1,5,34;
+  --ion-color-blu-contrast: #ffffff;
+  --ion-color-blu-contrast-rgb: 255,255,255;
+  --ion-color-blu-shade: #01041e;
+  --ion-color-blu-tint: #1a1e38;
+/**goldy**/
+
+--ion-color-goldy: #E6C11C;
+  --ion-color-goldy-rgb: 230,193,28;
+  --ion-color-goldy-contrast: #000000;
+  --ion-color-goldy-contrast-rgb: 0,0,0;
+  --ion-color-goldy-shade: #caaa19;
+  --ion-color-goldy-tint: #e9c733;
+
 }
+
+
 
 @media (prefers-color-scheme: dark) {
   /*
@@ -145,7 +173,37 @@
     --ion-color-light-contrast-rgb: 255,255,255;
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
+
   }
+
+  .ion-color-red {
+  --ion-color-base: var(--ion-color-red);
+  --ion-color-base-rgb: var(--ion-color-red-rgb);
+  --ion-color-contrast: var(--ion-color-red-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-red-contrast-rgb);
+  --ion-color-shade: var(--ion-color-red-shade);
+  --ion-color-tint: var(--ion-color-red-tint);
+}
+
+.ion-color-blu {
+  --ion-color-base: var(--ion-color-blu);
+  --ion-color-base-rgb: var(--ion-color-blu-rgb);
+  --ion-color-contrast: var(--ion-color-blu-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-blu-contrast-rgb);
+  --ion-color-shade: var(--ion-color-blu-shade);
+  --ion-color-tint: var(--ion-color-blu-tint);
+}
+
+
+.ion-color-goldy {
+  --ion-color-base: var(--ion-color-goldy);
+  --ion-color-base-rgb: var(--ion-color-goldy-rgb);
+  --ion-color-contrast: var(--ion-color-goldy-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-goldy-contrast-rgb);
+  --ion-color-shade: var(--ion-color-goldy-shade);
+  --ion-color-tint: var(--ion-color-goldy-tint);
+}
+
 
   /*
    * iOS Dark Theme
