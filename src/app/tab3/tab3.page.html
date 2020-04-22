@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="red">
-    <ion-title>
+    <ion-title color="goldy">
       Buscar
     </ion-title>
   </ion-toolbar>
@@ -8,7 +8,8 @@
 
 <ion-content color="blu">
 
-  <ion-searchbar class="dorado" [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)"></ion-searchbar>
+  <ion-searchbar color="blu" class="dorado" [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)">
+  </ion-searchbar>
 
   <ion-item color="blu" class="dorado">
     <ion-label color="goldy">Filtros</ion-label>

@@ -24,11 +24,11 @@ body {
   margin-right: auto;
   margin-left: auto;
   border: 12px solid transparent;
-  border-bottom-color: #28d;
+  border-bottom-color:  #010522;
 }
 
 .login-header {
-  background: #28d;
+  background: #010522;
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;
@@ -73,17 +73,21 @@ body {
 }
 
 .login input[type="submit"] {
-  background: #28d;
+  background: #010522;
   border-color: transparent;
   color: #fff;
   cursor: pointer;
 }
 
 .login input[type="submit"]:hover {
-  background: #17c;
+  background: #010522;
 }
 
 /* Buttons' focus effect */
 .login input[type="submit"]:focus {
-  border-color: #05a;
+  border-color:  #010522;
+}
+
+ ion-content.background{
+    --background: url(../../assets/img/bkg1.jpg) 0 0/100% 100% no-repeat;
 }
